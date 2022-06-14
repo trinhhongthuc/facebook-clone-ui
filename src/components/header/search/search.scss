@@ -1,0 +1,49 @@
+@use "../../../scss/index.scss" as *;
+
+.search {
+    @include flex(flex-start, center);
+
+    &__logo {
+        svg {
+            path {
+                stroke: $txt-color-white;
+            }
+        }
+    }
+
+    &__input {
+        width: 240px;
+        margin-left: 6px;
+        border-radius: 100px;
+        background-color: #f0f2f5;
+        height: 40px;
+        overflow: hidden;
+        @include flex(flex-start, center);
+
+        &-icon {
+            width: 38px;
+            margin-left: 6px;
+            @include flex(center, center);
+
+            svg {
+                font-size: 22px;
+                color: rgba($color: $primary-txt, $alpha: 0.6);
+            }
+        }
+
+        input {
+            border: none;
+            outline: none;
+            flex-grow: 1;
+            height: 100%;
+            background-color: #f0f2f5;
+            font-size: 1.4rem;
+            font-weight: 400;
+            padding-right: 12px;
+
+            &::placeholder {
+                color: rgba($color: $primary-txt, $alpha: 0.6);
+            }
+        }
+    }
+}

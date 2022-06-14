@@ -1,0 +1,48 @@
+@use "../../../scss/index.scss" as *;
+
+.menu {
+    height: 100%;
+    &__list {
+        @include flex(space-between, center);
+        height: 100%;
+        padding: 6px;
+
+        &-item {
+            width: 112px;
+            height: 100%;
+            position: relative;
+            @include flex(center, center);
+
+            &:hover {
+                background-color: $main-bg;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: calc(100% + 2px);
+                left: 0;
+                right: 0;
+                height: 4px;
+                background-color: $primary-color;
+                opacity: 0;
+            }
+        }
+
+        &-item.active {
+            &:hover {
+                background-color: unset;
+            }
+
+            svg {
+                color: $primary-color;
+            }
+        }
+
+        &-item.active::after {
+            opacity: 1;
+        }
+    }
+}

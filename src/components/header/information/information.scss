@@ -1,0 +1,27 @@
+@use "../../../scss/index.scss" as *;
+
+.info {
+    @include flex(unset, center);
+    &__user {
+        padding: 6px;
+        border-radius: 100px;
+
+        @include flex(center, center);
+
+        span {
+            margin-left: 6px;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        &:hover {
+            background-color: $main-bg;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+    }
+
+    &__list {
+        @include flex(unset, center);
+    }
+}

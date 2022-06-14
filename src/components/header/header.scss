@@ -1,0 +1,9 @@
+@use "../../scss/index.scss" as *;
+
+.header {
+    @include flex(unset, center);
+    height: 56px;
+    padding: 0 20px;
+
+    box-shadow: $box-shadow;
+}
