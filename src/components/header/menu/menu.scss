@@ -2,6 +2,7 @@
 
 .menu {
     height: 100%;
+    place-items: center;
     &__list {
         @include flex(space-between, center);
         height: 100%;

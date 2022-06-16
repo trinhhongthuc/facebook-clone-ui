@@ -2,6 +2,7 @@
 
 .search {
     @include flex(flex-start, center);
+    width: $width-sidebar;
 
     &__logo {
         svg {

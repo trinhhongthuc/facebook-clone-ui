@@ -1,10 +1,13 @@
 @use "../../../scss/index.scss" as *;
 
 .info {
-    @include flex(unset, center);
+    @include flex(flex-end, center);
+    width: $width-sidebar;
+
     &__user {
         padding: 6px;
         border-radius: 100px;
+        margin-right: 12px;
 
         @include flex(center, center);
 
@@ -23,5 +26,30 @@
 
     &__list {
         @include flex(unset, center);
+
+        li {
+            @include flex(center, center);
+
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: $main-bg;
+            margin-right: 12px;
+            cursor: pointer;
+
+            svg {
+                width: 17px;
+                height: 17px;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:hover {
+                background-color: $hover-overlay;
+                transition: background-color 0.3s ease;
+            }
+        }
     }
 }
