@@ -1,11 +1,17 @@
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import SearchIcon from "@mui/icons-material/Search";
+import { useState } from "react";
 import { ReactComponent as Logo } from "../../../assets/images/logoHeader.svg";
 import "./search.scss";
 const Search = () => {
+  const [activeInputSearch, setActiveInputSearch] = useState<string>("");
+
   return (
-    <div className="search">
+    <div className={`search ${activeInputSearch}`}>
       <div className="search__logo">
-        <Logo />
+        <Logo className="search__logo-icon" />
+
+        <ArrowBackIcon className="search__arrow-back" />
       </div>
 
       <div className="search__input">
@@ -13,7 +19,15 @@ const Search = () => {
           <SearchIcon />
         </span>
 
-        <input type="text" placeholder="Search on facebook" />
+        <input
+          type="text"
+          placeholder="Search on facebook"
+          onFocus={() => setActiveInputSearch("active")}
+          onBlur={() => setActiveInputSearch("")}
+        />
+        <div className="search__input-result">
+          Không có kết quả tìm kiếm nào
+        </div>
       </div>
     </div>
   );
