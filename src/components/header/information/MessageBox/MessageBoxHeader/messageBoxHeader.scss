@@ -1,0 +1,38 @@
+@use "../../../../../scss/index.scss" as *;
+
+.message__box-header {
+    @include flex(space-between, center);
+
+    height: $width-message-box-header;
+    width: 100%;
+
+    &-title {
+        font-size: 2.4rem;
+        color: $txt-color;
+        font-weight: 700;
+    }
+
+    &-action {
+        @include flex(flex-end, center);
+
+        span {
+            $size: 32px;
+            width: $size;
+            height: $size;
+            @include flex(center, center);
+            border-radius: 50%;
+            transition: background-color 0.3s ease-in-out;
+            margin: 0 6px;
+
+            &:hover {
+                background-color: $main-bg;
+            }
+
+            svg {
+                width: 20px;
+                height: 20px;
+                fill: #606770;
+            }
+        }
+    }
+}

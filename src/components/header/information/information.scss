@@ -4,6 +4,8 @@
     @include flex(flex-end, center);
     width: $width-sidebar;
 
+    position: relative;
+
     &__user {
         padding: 6px;
         border-radius: 100px;

@@ -1,0 +1,13 @@
+@use "../../../../scss/index.scss" as *;
+
+.message__box {
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+    width: $width-message-box;
+    background-color: $white-color;
+    max-height: 50vh;
+    min-height: 400px;
+    z-index: 10;
+    padding: 0 16px;
+}

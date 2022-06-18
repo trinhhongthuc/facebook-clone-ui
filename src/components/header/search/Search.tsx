@@ -1,17 +1,28 @@
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../../../assets/images/logoHeader.svg";
+import routes from "../../../routes";
 import "./search.scss";
 const Search = () => {
   const [activeInputSearch, setActiveInputSearch] = useState<string>("");
 
+  const handleBack = () => {
+    setActiveInputSearch("");
+  };
+
   return (
     <div className={`search ${activeInputSearch}`}>
       <div className="search__logo">
-        <Logo className="search__logo-icon" />
+        <Link to={`${routes.home}`}>
+          <Logo className="search__logo-icon" />
+        </Link>
 
-        <ArrowBackIcon className="search__arrow-back" />
+        <ArrowBackIcon
+          className="search__arrow-back"
+          onClick={() => handleBack()}
+        />
       </div>
 
       <div className="search__input">

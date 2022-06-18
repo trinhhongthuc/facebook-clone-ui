@@ -1,10 +1,11 @@
 import "./information.scss";
 
-import { ReactComponent as Droparrowbottom } from "../../../assets/images/droparrowbottom.svg";
+import { ReactComponent as DropDownBottom } from "../../../assets/images/dropDownBottom.svg";
 import { ReactComponent as Menu } from "../../../assets/images/menu.svg";
 import { ReactComponent as Message } from "../../../assets/images/message.svg";
 import { ReactComponent as Notification } from "../../../assets/images/notification.svg";
 import Image from "../../image/Image";
+import MessageBox from "./MessageBox/MessageBox";
 
 const Information = () => {
   return (
@@ -20,12 +21,13 @@ const Information = () => {
         </li>
         <li>
           <Message />
+          <MessageBox />
         </li>
         <li>
           <Notification />
         </li>
         <li>
-          <Droparrowbottom />
+          <DropDownBottom />
         </li>
       </ul>
     </div>

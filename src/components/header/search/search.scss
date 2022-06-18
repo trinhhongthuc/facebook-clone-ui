@@ -38,6 +38,7 @@
     }
 
     &.active &__input {
+        width: 260px;
         &-icon {
             display: none;
         }

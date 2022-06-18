@@ -12,6 +12,8 @@
             width: 112px;
             height: 100%;
             position: relative;
+            color: $second-color-icon;
+
             @include flex(center, center);
 
             &:hover {

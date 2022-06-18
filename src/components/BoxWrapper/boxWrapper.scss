@@ -1,0 +1,6 @@
+@use "../../scss/index.scss" as *;
+
+.box-wrapper {
+    box-shadow: $box-shadow;
+    border-radius: 15px;
+}
