@@ -6,8 +6,55 @@
     right: 0;
     width: $width-message-box;
     background-color: $white-color;
-    max-height: 50vh;
-    min-height: 400px;
+    max-height: 800px;
+    min-height: 250px;
     z-index: 10;
-    padding: 0 16px;
+    border-radius: 7px;
+
+    &-search {
+        @include flex(flex-start, center);
+        background-color: $main-bg;
+        border-radius: 20px;
+        height: 36px;
+        margin: 0 16px;
+
+        svg {
+            width: 23px;
+            height: 23px;
+            margin-left: 8px;
+            fill: $txt-second-color;
+        }
+
+        &-input {
+            &::placeholder {
+                color: $txt-second-color;
+            }
+            color: $txt-color;
+            padding-left: 12px;
+        }
+    }
+
+    &-main {
+        margin-top: 12px;
+        overflow: auto;
+        height: 300px;
+    }
+
+    &-footer {
+        height: 43px;
+        text-align: center;
+        @include flex(center, center);
+        border-top: 1px solid $main-bg;
+        &-link {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: $primary-color;
+            width: 100%;
+            display: block;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
 }

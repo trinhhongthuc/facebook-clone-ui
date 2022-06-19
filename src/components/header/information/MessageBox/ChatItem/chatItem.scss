@@ -1,0 +1,77 @@
+@use "../../../../../scss/index.scss" as *;
+
+.chat-item {
+    @include flex(unset, center);
+
+    margin: 0 8px;
+    padding: 10px 8px;
+    position: relative;
+
+    &:hover {
+        background-color: $main-bg;
+        border-radius: 12px;
+        transition: background-color 0.3s ease;
+    }
+
+    &:hover &__action {
+        opacity: 1;
+    }
+
+    &__action {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: $white-color;
+
+        @include flex(center, center);
+        position: absolute;
+        right: 15px;
+        transform: translateX(-50%);
+        box-shadow: $box-shadow;
+
+        cursor: pointer;
+        opacity: 0;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            fill: $txt-second-color;
+        }
+
+        &:hover {
+            background-color: $main-bg;
+            transition: background-color 0.3s ease;
+        }
+    }
+
+    &__avatar {
+        @include flex(center, center);
+        margin-right: 12px;
+    }
+
+    &__info {
+        flex-grow: 1;
+        &-name {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: $txt-color;
+            line-height: 22px;
+        }
+
+        &-description {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: $txt-second-color;
+            line-height: 22px;
+        }
+    }
+
+    &__icon-notification {
+        width: 16px;
+        color: $second-color;
+        svg {
+            fill: $disable-color-icon;
+            width: 100%;
+        }
+    }
+}

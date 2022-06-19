@@ -1,0 +1,17 @@
+@use "../../scss/index.scss" as *;
+
+.input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    height: 100%;
+    background-color: #f0f2f5;
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding-right: 12px;
+    border-radius: 100px;
+
+    &::placeholder {
+        color: rgba($color: $primary-txt, $alpha: 0.6);
+    }
+}
